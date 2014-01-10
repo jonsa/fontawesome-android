@@ -412,6 +412,15 @@ public enum FontAwesome {
 		this.mValue = value;
 	}
 
+	public static FontAwesome get(char character) {
+		for (FontAwesome font : FontAwesome.values()) {
+			if (font.mValue == character) {
+				return font;
+			}
+		}
+		return null;
+	}
+
 	/**
 	 * Get the string representation of a FontAwesome character
 	 */
